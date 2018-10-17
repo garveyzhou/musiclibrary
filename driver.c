@@ -5,18 +5,25 @@
 #include "mlist.h"
 
 int main(){
-  struct song_node * list = 0; 
+  struct song_node * list = NULL; 
   printf("testing print_list\n");
   print_list(list);
-  printf("testing insert_order\n");
+  printf("testing insert_front\n");
+  list = insert_front(list,"Warriors","Imagine Dragons");
+  print_list(list);
+  printf("\ntesting insert_order\n");
   list = insert_order(list,"Song","artist");
   print_list(list);
+  printf("\n");
   list = insert_order(list,"even flow","pearl jam");
   print_list(list);
+  printf("\n");
   list = insert_order(list,"daughter","pearl jam");
   print_list(list);
+  printf("\n");
   list = insert_order(list,"Sad","Trump");
   print_list(list);
+  printf("\n");
   list = insert_order(list,"Sadder","America");
   print_list(list);
   
