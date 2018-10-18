@@ -21,27 +21,37 @@ int main(){
   list = insert_order(list,"daughter","pearl jam");
   print_list(list);
   printf("\n");
-  list = insert_order(list,"Sad","Trump");
+  list = insert_order(list,"Sad","Tick");
   print_list(list);
   printf("\n");
-  list = insert_order(list,"Sadder","America");
+  list = insert_order(list,"Sadder","Aight");
   print_list(list);
   
   printf("\n\ntesting searches\n");
   printf("looking for pearl jam\n");
   struct song_node * found = search_artist(list,"pearl jam");
   printf("%s : %s\n",found->artist,found->name);
-  found = search_artist(list,"no way");
-  printf("looking for no way\n");
-  printf("%s \n",found);
+  
+  printf("looking for no way artist\n");
+  search_artist(list,"no way");
   
   found = search_both(list,"even flow", "pearl jam");
   printf("looking for pearl jam : even flow\n");  
   printf("%s : %s\n",found->artist,found->name);
   printf("looking for pearl jam : Nani\n");
-  found = search_both(list,"Nani", "pearl jam");
-  printf("%s \n",found);
-
+  search_both(list,"Nani", "pearl jam");
   
+
+  printf("testing deleting\n");
+  printf("deleting Aight:Sadder\n");
+  list = delete_node(list,"Sadder","Aight");
+  print_list(list);
+  printf("\ndeleting pearl jam: even flow\n");
+  list = delete_node(list,"even flow","pearl jam");
+  print_list(list);
+  printf("\ntesting clear_list\n");
+  list = free_list(list);
+  printf("printing list: \n");
+  print_list(list);
   return 0;
 }

@@ -1,11 +1,11 @@
 all: mlist.o driver.o mlist.h
-	gcc mlist.o driver.o
+	gcc -g mlist.o driver.o
 
 mlink.o: mlist.c mlist.h
-	gcc -c mlist.c
+	gcc -c -g mlist.c
 
 driver.o: driver.c mlist.h
-	gcc -c driver.c
+	gcc -c -g driver.c
 
 run: all
 	./a.out
