@@ -41,7 +41,6 @@ int main(){
   printf("looking for pearl jam : Nani\n");
   search_both(list,"Nani", "pearl jam");
   
-
   printf("testing deleting\n");
   printf("deleting Aight:Sadder\n");
   list = delete_node(list,"Sadder","Aight");
@@ -49,6 +48,16 @@ int main(){
   printf("\ndeleting pearl jam: even flow\n");
   list = delete_node(list,"even flow","pearl jam");
   print_list(list);
+
+  printf("\ntesting random\n");
+  struct song_node * random_one = random_node(list);
+  printf("%s : %s\n", random_one ->artist, random_one->name);
+  random_one = random_node(list);
+  printf("%s : %s\n", random_one ->artist, random_one->name);
+  random_one = random_node(list);
+  printf("%s : %s\n", random_one ->artist, random_one->name);
+
+
   printf("\ntesting clear_list\n");
   list = free_list(list);
   printf("printing list: \n");
