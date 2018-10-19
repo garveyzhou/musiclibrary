@@ -92,10 +92,10 @@ struct song_node * random_node(struct song_node * x){
   }
   counter = rand() % counter;
   while(counter){
-    counter --;
-    head = head -> next;
+   
+    length = length -> next;
   }
-  return head;
+  return length;
 }
 
 struct song_node * delete_node(struct song_node * x, char * s1,char * s2){
